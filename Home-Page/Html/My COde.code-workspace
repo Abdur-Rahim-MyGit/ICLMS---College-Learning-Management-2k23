@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../My COde"
+		},
+		{
+			"path": "../Documents/BigWing"
+		}
+	],
+	"settings": {
+		"files.autoSave": "onFocusChange"
+	}
+}

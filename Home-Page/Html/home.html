@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div class="account-form">
+</head>
+<style>
+
+.account-form {
+  position: fixed;
+  top: 0;
+  right: -105%;
+  width: 35rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  z-index: 1200;
+  padding: 2rem;
+  text-align: center;
+}
+
+.account-form.active {
+  right: 0;
+  -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+}
+
+.account-form #close-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #444;
+}
+
+.account-form #close-form:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.account-form form {
+  border: 0.1rem solid #0eb582;
+  padding: 2rem;
+  display: none;
+}
+
+.account-form form.active {
+  display: block;
+}
+
+.account-form form h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #444;
+  padding-bottom: .5rem;
+  text-transform: uppercase;
+}
+
+.account-form form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 0.1rem solid #0eb582;
+  font-size: 1.6rem;
+  margin: .7rem 0;
+}
+
+.account-form form .flex {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+}
+
+.account-form form .flex label {
+  font-size: 1.5rem;
+  color: #777;
+  cursor: pointer;
+}
+
+.account-form form .flex a {
+  font-size: 1.5rem;
+  color: #777;
+  margin-left: auto;
+}
+
+.account-form form .flex a:hover {
+  text-decoration: underline;
+  color: #0eb582;
+}
+
+.account-form form .btn {
+  width: 100%;
+}
+
+.account-form .buttons .btn {
+  margin: 0 .5rem;
+}
+
+.account-form .buttons .btn.active {
+  background: #0eb582;
+  color: #fff;
+}
+</style>
+
+
+<body>
+    <!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> educa </a>
+ 
+    <nav class="navbar">
+       <div id="close-navbar" class="fas fa-times"></div>
+       <a href="home.html">home</a>
+       <a href="about.html">about</a>
+       <a href="courses.html">courses</a>
+       <a href="contact.html">contact</a>
+    </nav>
+ 
+    <div class="icons">
+       <div id="account-btn" class="fas fa-user"></div>
+       <div id="menu-btn" class="fas fa-bars"></div>
+    </div>
+ 
+ </header>
+ 
+ <!-- account form section starts  -->
+ 
+ <div class="account-form">
+ 
+    <div id="close-form" class="fas fa-times"></div>
+ 
+    <div class="buttons">
+       <span class="btn active login-btn">login</span>
+       <span class="btn register-btn">register</span>
+    </div>
+ 
+    <form class="login-form active" action="">
+       <h3>login now</h3>
+       <input type="email" placeholder="enter your email" class="box">
+       <input type="password" placeholder="enter your password" class="box">
+       <div class="flex">
+          <input type="checkbox" name="" id="remember-me">
+          <label for="remember-me">remember me</label>
+          <a href="#">forgot password?</a>
+       </div>
+       <input type="submit" value="login now" class="btn">
+    </form>
+ 
+    <form class="register-form" action="">
+       <h3>register now</h3>
+       <input type="email" placeholder="enter your email" class="box">
+       <input type="password" placeholder="enter your password" class="box">
+       <input type="password" placeholder="confirm your password" class="box">
+       <input type="submit" value="register now" class="btn">
+    </form>
+ 
+ </div>
+ 
+</body>
+</html>

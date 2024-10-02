@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>College Web-Site Souban</title>
+    <link rel="stylesheet" href="contat.css">
+</head>
+<body>
+    <div class="isclogo">
+        <img src="logo1.png" class="log">
+    </div>
+    <header>
+<!-- Navigation Bar Souban-->
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            
+            <h2 class="logo">Islamiah College</h2></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="active"><a href="Index.html">Home</a>  </li>
+                <li class="active1"><a href="About.html">About</a></li>
+                <li class="active2"><a href="Department.html">Department</a>
+                <li class="active3"><a href="service.html">Services</a></li>
+                <li class="active4"><a href="contat.html">Contact</a></li>
+                <li class="active5"><a href="Developer.html">Developers</a></li>
+            </ul>
+        </div>
+<!-- Searching Box Souban -->
+        <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To Search">
+            <a href="#"> <button class="btn">Search</button></a>
+        </div>
+    </div> 
+<!-- side nav -->
+     <nav id="sideNav">
+        <ul>
+            <li class="sidebars"><a href="Index.html">Home</a></li>
+            <li class="sidebars"><a href="About.html">About</a></li>
+            <li class="sidebars"><a href="#">Announcement</a></li>
+            <li  class="sidebars"><a href="#">Courses</a></li>
+            <li class="sidebars"><a href="Department.html">Department</a></li>
+            <li class="sidebars"><a href="">College Calender</a></li>
+            <li class="sidebars"><a href="#">Autonomous Syllabus</a></li>
+            <li class="sidebars"><a href="#">Infrastucture</a></li>
+            <li class="sidebars"><a href="contat.html">Contact</a></li>
+        </ul>
+    </nav><img src="menu2.jpg" id="menubtns">
+<!-- Java Script  -->
+    <script>
+        var menubtns=document.getElementById("menubtns");
+        var sideNav=document.getElementById("sideNav");
+        sideNav.style.right="-250px";
+        menubtns.onclick=function(){
+            if(sideNav.style.right == "-250px"){
+                sideNav.style.right = "0";
+            }
+            else{
+                sideNav.style.right = "-250px"
+            }
+        }
+    </script>
+<iframe class="ifra2" src="mapimg3.png" frameborder="0"></iframe>
+<!-- <iframe class="ifra2" style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3892.580186815813!2d78.62598181529184!3d12.675508224734532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bada9bce437be39%3A0x95e3cfe21333c724!2sIslamiah%20College%20(Autonomous)!5e0!3m2!1sen!2sin!4v1581757187986!5m2!1sen!2sin" frameborder="0"></iframe> -->
+<iframe class="ifra" src="Responsive Contact Us Form/index.html"></iframe>
+<iframe class="ifrafoot" src="Foot/index.html"></iframe>
+            <div class="isclogo">
+                <img src="logo1.png" class="logfoot">
+            </div>
+            
+ </div>
+   </footer>
+</header>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>College Web-Site Souban</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="About.css">
+</head>
+<body>
+    <div class="isclogo">
+        <img src="logo1.png" class="log">
+    </div>
+    <header>
+<!-- Navigation Bar Souban-->
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">  Islamiah College</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Department</a>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+<!-- Searching Box Souban -->
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To Search">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div> 
+<!-- Content Souban -->
+        <div class="content">
+            <h1>Welcome To Islamiah <br><span>College</span> <br>(Autonomous)</h1>
+            <p class="par"><br> 
+            Islamiah College (Autonomous) - Vaniyambadi,100 years of education excellence. <br>
+            was established in year 1919 and it's located in Vaniyambadi, Tamil Nadu.<br>
+            The College Offers Courses at the under Graduate,post Graduate and Doctorate Levels. <br>
+            </p> 
+            <nav id="sideNav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="#">Announcement</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="">Department</a></li>
+                    <li><a href="#">College Calender</a></li>
+                    <li><a href="#">Autonomous Syllabus</a></li>
+                    <li><a href="#">Infrastucture</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav><img src="menu2.jpg" id="menubtns">
+<!-- Java Script  -->
+            <script>
+                var menubtns=document.getElementById("menubtns");
+                var sideNav=document.getElementById("sideNav");
+                sideNav.style.right="-250px";
+                menubtns.onclick=function(){
+                    if(sideNav.style.right == "-250px"){
+                        sideNav.style.right = "0";
+                    }
+                    else{
+                        sideNav.style.right = "-250px"
+                    }
+                }
+            </script>
+<!-- Join Button -->
+                <!-- <h1>DO COME & VISIT <span class="change_content"> </span> <span style="margin-block-end: 20px;"> | </span> </h1> -->
+                <button class="cn"><a href="Form.html">  Join Us  </a></button>
+<!-- Log-in Form Souban -->
+                <div class="form">
+                    <h2>Log-in Here</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here">
+                    <input type="password" name="" placeholder="Enter Password Here">
+                    <button class="btnn"><a href="#">Login</a></button>
+                    <p class="link">Don't have an account<br>
+                    <a href="Form.html">Sign up </a> here</a></p>
+                    <p class="liw">Log in with</p>
+                    <div class="icons">
+<!-- Icons -->
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                        </div>
+<!-- About -->
+                        <section id="about">
+                            <div class="about-left-col">
+                                <img src="lo.png" alt="">
+                            </div>
+                            <div class="about-right-col"></div>
+                            <div class="about-text">
+                                <h1>About us </h1>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum delectus culpa ea praesentium quas fugit placeat doloribus iste provident! Earum autem corporis delectus dolorem laborum at laudantium quaerat! In, obcaecati.</p>
+                                 <h2>"Learning is not attained by chance, it must be sought for with ardor and attended to with diligence"</h2>
+                            </div>
+                        </section>
+            
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+</header>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Button with Progress Bar | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+<body>
+  <div class="button ">
+    <div class="text-icon">
+      <i class="bx bx-cloud-upload"></i>
+      <span class="text">Upload File</span>
+    </div>
+  </div>
+
+  <script>
+    const button = document.querySelector(".button"),
+    text = document.querySelector(".text");
+
+    button.addEventListener("click", ()=>{
+      button.classList.add("progress");
+      text.innerText = "Uploading...";
+
+      setTimeout(()=>{
+       button.classList.remove("progress"); //remove progress after 6s
+       text.innerText = "Uploaded";
+      },6000); //1000ms = 1s (6000 = 6s)
+
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon"
+        href="https://themes.getbootstrap.com/wp-content/themes/bootstrap-marketplace/assets/images/fav/favicon.ico">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://themes.getbootstrap.com/wp-content/themes/bootstrap-marketplace/assets/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://themes.getbootstrap.com/wp-content/themes/bootstrap-marketplace/assets/images/fav/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+    <style>
+        /* Modify the background color */
+
+        /* .navbar-custom {
+          background-color: rgb(0, 0, 0);
+      }
+      /* Modify brand and text color */
+
+        /* .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text {
+          color: rgb(255, 255, 255);
+      /* } */
+
+        .navbar-custom .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .navbar-custom .nav-item.active .nav-link,
+        .navbar-custom .nav-item:hover .nav-link {
+            color: #d7b539;
+        }
+
+        /* .navbar-custom .navbar-brand:hover{
+          color: #ffffff;
+      } */
+    </style>
+    <style>
+        .ho:hover {
+            text-shadow: none !important;
+            box-sizing: border-box !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            -webkit-transform: scale(1.1) !important;
+            -ms-transform: scale(1.1) !important;
+            transform: scale(1.1) !important;
+            z-index: 2;
+        }
+    </style>
+    <title>ICLMS</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['bar'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'I Year', 'II Year', 'III Year'],
+                ['Bsc(Cs) Aided', 1000, 900, 1000],
+                ['Bsc(Cs) Unaided', 850, 900, 900],
+                ['Bca Shift I', 750, 850, 850],
+                ['Bca Shift II', 850, 850, 750],
+                ['Bsc(Ds)', 850, '-', '-']
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Students info',
+                    subtitle: 'Student No, Students, and Year: I year-III Year',
+                }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="main-container d-flex">
+        <div class="sidebar" id="side_nav">
+          <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+            <h1 class="fs-4"><span class="bg-white text-dark rounded shadow px-2 me-2">CS</span><span
+                class="text-white">Computer Science</span></h1>
+            <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i class="fal fa-stream"></i></button>
+          </div>
+    
+          <ul class="list-unstyled px-2">
+            <li class="eff"><a href="staff.html" class="text-decoration-none px-3 py-2 d-block"><i class="fas fa-id-card"></i> &nbsp;
+              Dept Details</a></li>
+            <li class="eff"><a href="staff.html" class="text-decoration-none px-3 py-2 d-block"><i class="fas fa-id-card"></i> &nbsp;
+                staff Profile</a></li>
+            <li class="eff"><a href="student.html" class="text-decoration-none px-3 py-2 d-block"><i
+                  class="fas fa-id-badge"></i> &nbsp; Students
+                Profile</a></li>
+            <li class="eff dropdown"><a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block"
+                data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false"><i
+                  class="fad fa-sort-amount-down"></i> &nbsp;
+                CIA Marks</a>
+              <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 20px;">
+    
+                <li class="dropstart" >
+    
+                  <a class="dropdown-item dropdown-toggle nef"  data-bs-toggle="dropdown" href="#"> Semester I</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="cia_1_.html" class="dropdown-item rff">CIA 1</a>
+                      <a href="#" class="dropdown-item rff">CIA 2 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle nef" data-bs-toggle="dropdown" href="#">Semester II</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="cia_1_.html" class="dropdown-item rff" >CIA 1</a>
+                      <a href="#" class="dropdown-item rff" >CIA 2 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle nef" data-bs-toggle="dropdown" href="#">Semester III</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="cia_1_.html" class="dropdown-item rff" >CIA 1</a>
+                      <a href="#" class="dropdown-item rff" >CIA 2 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-togglev nef" data-bs-toggle="dropdown" href="#">Semester IV</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="cia_1_.html" class="dropdown-item rff">CIA 1</a>
+                      <a href="#" class="dropdown-item rff" >CIA 2 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle nef" data-bs-toggle="dropdown" href="#">Semester V</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="cia_1_.html" class="dropdown-item rff" >CIA 1</a>
+                      <a href="#" class="dropdown-item rff" >CIA 2 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle nef" data-bs-toggle="dropdown" href="#">Semester VI</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="cia_1_.html" class="dropdown-item rff">CIA 1</a>
+                      <a href="#" class="dropdown-item rff">CIA 2 </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="eff"><a href="calender.html" class="text-decoration-none px-3 py-2 d-block"><i
+                  class="fas fa-calendar-alt"></i> &nbsp;
+                College Calender</a></li>
+            <li class="eff"><a href="announcement.html"
+                class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+                <span><i class="far fa-bullhorn"></i> &nbsp; Announcements</span>
+                <span class="bg-dark rounded-pill text-white py-0 px-2">02</span>
+              </a>
+            </li>
+            <li class="eff dropdown"><a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block "
+                data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false"><i
+                  class="far fa-clipboard-user"></i> &nbsp;
+                Attendance</a>
+              <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                <li>
+                  <a href="attendanceeven.html" class="dropdown-item nefs" >Even Sem</a>
+                  <a href="attendanceodd.html" class="dropdown-item nefs">Odd Sem</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <hr class="h-color mx-2">
+    
+          <ul class="list-unstyled px-2">
+            <li class="eff dropdown"><a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block "
+                data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false"><i
+                  class="fad fa-sort-amount-down"></i> &nbsp;
+                Autonomous Syllabus</a>
+              <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle nefs" data-bs-toggle="dropdown" href="#"> I Year</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="evensem.html" class="dropdown-item nefs">Even Sem</a>
+                      <a href="oddsem.html" class="dropdown-item nefs">Odd Sem</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#"> II Year</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="evensem.html" class="dropdown-item">Even Sem</a>
+                      <a href="oddsem.html" class="dropdown-item">Odd Sem</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#"> III Year</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="evensem.html" class="dropdown-item">Even sem</a>
+                      <a href="oddsem.html" class="dropdown-item">Odd Sem</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="eff dropdown"><a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block "
+                data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false"><i
+                  class="fas fa-books"></i> &nbsp;
+                Lecture Notes</a>
+              <ul class="dropdown-menu " style="background-color: #452e46f3; border-radius: 15px;">
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">I Year</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="lectureeven.html" class="dropdown-item">Even Sem</a>
+                      <a href="lectureodd.html" class="dropdown-item">Odd Sem</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">II Year</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="lectureeven2nd.html" class="dropdown-item">Even Sem</a>
+                      <a href="lectureodd2nd.html" class="dropdown-item">Odd Sem</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropstart">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">III Year</a>
+                  <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                    <li>
+                      <a href="lectureeven3rd.html" class="dropdown-item">Even sem</a>
+                      <a href="lectureodd3rd.html" class="dropdown-item">Odd Sem</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="eff dropdown"><a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block "
+              data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false"><i
+                class="far fa-calendar-times"></i> &nbsp;
+              Time Table</a>
+            <ul class="dropdown-menu " style="background-color: #452e46f3; border-radius: 15px;">
+              <li class="dropstart">
+                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">I Year</a>
+                <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                  <li>
+                    <a href="timeeven.html" class="dropdown-item">Even Sem</a>
+                    <a href="timeodd.html" class="dropdown-item">Odd Sem</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropstart">
+                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">II Year</a>
+                <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                  <li>
+                    <a href="timeeven.html" class="dropdown-item">Even Sem</a>
+                    <a href="timeodd.html" class="dropdown-item">Odd Sem</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropstart">
+                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">III Year</a>
+                <ul class="dropdown-menu" style="background-color: #452e46f3; border-radius: 15px;">
+                  <li>
+                    <a href="timeeven.html" class="dropdown-item">Even sem</a>
+                    <a href="timeodd.html" class="dropdown-item">Odd Sem</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+            <li class="eff"><a href="examtime.html" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-table"></i> &nbsp; Exam Time
+                Table</a></li>
+            <li class="eff"><a href="qnsbank.html" class="text-decoration-none px-3 py-2 d-block"><i class="fas fa-question-circle"></i> &nbsp;
+                Question Banks</a></li>
+            <li class="eff"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fas fa-book"></i> &nbsp; Reference
+                Books</a></li>
+          </ul>
+          <hr class="h-color mx-2">
+    
+          <ul class="list-unstyled px-2">
+            <li class="eff"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fas fa-photo-video"></i> &nbsp; Video
+                Lectures</a></li>
+          </ul>
+          <hr class="h-color mx-2">
+    
+          <ul class="list-unstyled px-2">
+            <li class="eff"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="far fa-poll-h"></i> &nbsp; Result</a>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+            <nav class="navbar navbar-custom sticky-top navbar-expand-md navbar-light"
+                style="background-color: #00000000;">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between d-md-none d-block">
+                        <button class="btn px-1 py-0 open-btn me-2"><i class="fal fa-stream"></i></button>
+                        <a class="navbar-brand fs-4" href="#"><span
+                                class="bg-dark rounded px-2 py-0 text-white">CS</span></a>
+                    </div>
+                    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fal fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto text-light mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-light" aria-current="page" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bsc(cs)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bca</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bsc(Ds)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Msc(Cs)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">M.Phil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <footer>
+          <iframe class="ifrafoot" src="Foot/index.html" frameborder="0"></iframe>
+        </footer>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script>
+            $(".count").counterUp({ time: 4000 });
+        </script>
+        <script>
+            $(".sidebar ul li").on('click', function () {
+                $(".sidebar ul li.active").removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('.open-btn').on('click', function () {
+                $('.sidebar').addClass('active');
+
+            });
+
+            $('.close-btn').on('click', function () {
+                $('.sidebar').removeClass('active');
+
+            })
+
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#example').DataTable();
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+Jc
+        
+    </body>
+    </html>
+    
